@@ -42,8 +42,6 @@ function Index() {
     secondaryQuote,
     bookingUrl,
     instagramUrl,
-    footerLine,
-    disclaimer,
   } = profileConfig;
 
   return (
