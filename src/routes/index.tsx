@@ -47,21 +47,22 @@ function Index() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center bg-background px-6 py-12">
-      {/* Subtle organic shape in the background */}
+      {/* Subtle organic shapes in the background */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sage/10 blur-3xl" />
-        <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-sage/8 blur-3xl" />
+        <div className="animate-slow-drift absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sage/10 blur-3xl" />
+        <div className="animate-slow-drift-alt absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-sage/8 blur-3xl" />
+        <div className="animate-slow-drift absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-sage/5 blur-3xl" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center text-center">
         {/* Profile placeholder */}
         <div className="animate-soft-scale">
-          <div className="relative">
-            <div className="flex h-28 w-28 items-center justify-center rounded-full border-2 border-sage-border bg-creme-light shadow-sm">
-              <span className="font-serif text-3xl font-medium text-sage-dark">
+          <div className="relative rounded-full p-[3px] ring-1 ring-sage/25">
+            <div className="flex h-28 w-28 items-center justify-center rounded-full border border-sage-border bg-creme-light shadow-[0_8px_28px_-14px_var(--color-sage)]">
+              <span className="font-serif text-3xl font-medium tracking-[0.08em] text-sage-dark">
                 {initials}
               </span>
             </div>
@@ -74,21 +75,31 @@ function Index() {
           <h1 className="font-serif text-[2rem] leading-[1.15] font-semibold tracking-tight text-sage-dark sm:text-[2.25rem]">
             {name}
           </h1>
-          <p className="mt-2 text-sm font-medium uppercase tracking-[0.12em] text-sage-foreground/80">
+          <p className="mt-3 text-[0.7rem] font-medium uppercase tracking-[0.22em] text-sage-foreground/75">
             {title}
           </p>
         </div>
 
+        {/* Divider */}
+        <div
+          aria-hidden="true"
+          className="mt-8 flex animate-fade-in-up items-center gap-3 delay-200"
+        >
+          <span className="h-px w-10 bg-gradient-to-r from-transparent to-sage/50" />
+          <span className="h-1 w-1 rounded-full bg-sage/60" />
+          <span className="h-px w-10 bg-gradient-to-l from-transparent to-sage/50" />
+        </div>
+
         {/* Main quote */}
-        <div className="mt-10 animate-fade-in-up delay-200">
-          <p className="font-serif text-2xl leading-snug font-medium text-sage-dark sm:text-[1.625rem]">
+        <div className="mt-8 animate-fade-in-up delay-200">
+          <p className="font-serif text-[1.6rem] leading-snug font-medium text-balance text-sage-dark sm:text-[1.75rem]">
             {mainQuote}
           </p>
         </div>
 
         {/* Secondary quote */}
         <div className="mt-5 animate-fade-in-up delay-300">
-          <p className="text-base leading-relaxed text-sage-foreground/70">
+          <p className="text-[0.95rem] leading-relaxed text-balance text-sage-foreground/70">
             {secondaryQuote}
           </p>
         </div>
