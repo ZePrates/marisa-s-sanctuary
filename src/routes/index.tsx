@@ -40,6 +40,7 @@ function Index() {
     title,
     mainQuote,
     secondaryQuote,
+    specialities,
     bookingUrl,
     instagramUrl,
   } = profileConfig;
