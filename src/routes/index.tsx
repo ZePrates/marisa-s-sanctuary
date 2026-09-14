@@ -111,12 +111,16 @@ function Index() {
         >
           <a
             href={bookingUrl}
-            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-sage px-6 py-4 text-center text-base font-semibold text-sage-foreground shadow-[0_2px_12px_-4px_var(--color-sage)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sage-subtle hover:shadow-[0_6px_20px_-6px_var(--color-sage)] active:translate-y-0 active:shadow-[0_2px_8px_-4px_var(--color-sage)]"
+            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-sage px-6 py-[1.15rem] text-center text-base font-semibold tracking-[0.01em] text-sage-foreground shadow-[0_3px_14px_-5px_var(--color-sage)] ring-1 ring-inset ring-creme-light/30 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-sage-subtle hover:shadow-[0_10px_24px_-8px_var(--color-sage)] active:translate-y-0 active:shadow-[0_2px_8px_-4px_var(--color-sage)]"
           >
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-creme-light/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+            />
             <Calendar
               aria-hidden="true"
               className="h-[1.1em] w-[1.1em] shrink-0 opacity-80 transition-transform duration-300 group-hover:scale-110"
-              strokeWidth={2}
+              strokeWidth={1.75}
             />
             <span>Marcar Consulta</span>
           </a>
@@ -125,20 +129,21 @@ function Index() {
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-sage/85 px-6 py-4 text-center text-base font-semibold text-sage-foreground shadow-[0_2px_10px_-4px_var(--color-sage)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sage hover:shadow-[0_6px_18px_-6px_var(--color-sage)] active:translate-y-0 active:shadow-[0_2px_8px_-4px_var(--color-sage)]"
+            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl border border-sage/40 bg-sage/20 px-6 py-[1.05rem] text-center text-base font-medium tracking-[0.01em] text-sage-dark shadow-[0_2px_10px_-6px_var(--color-sage)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-sage/35 hover:shadow-[0_8px_20px_-8px_var(--color-sage)] active:translate-y-0"
           >
             <User
               aria-hidden="true"
-              className="h-[1.1em] w-[1.1em] shrink-0 opacity-80 transition-transform duration-300 group-hover:scale-110"
-              strokeWidth={2}
+              className="h-[1.1em] w-[1.1em] shrink-0 opacity-70 transition-transform duration-300 group-hover:scale-110"
+              strokeWidth={1.75}
             />
             <span>Conhece-me um pouco melhor</span>
           </a>
         </nav>
 
         {/* Footer */}
-        <footer className="mt-12 animate-fade-in-up delay-500">
-          <p className="text-xs font-medium uppercase tracking-[0.12em] text-sage-foreground/70">
+        <footer className="mt-14 flex animate-fade-in-up flex-col items-center gap-3 delay-500">
+          <span aria-hidden="true" className="h-px w-12 bg-sage/35" />
+          <p className="text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.2em] text-sage-foreground/60">
             {specialities}
           </p>
         </footer>
