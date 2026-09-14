@@ -93,13 +93,6 @@ function Index() {
           </p>
         </div>
 
-        {/* Specialities */}
-        <div className="mt-3 animate-fade-in-up delay-350">
-          <p className="text-xs font-medium uppercase tracking-[0.12em] text-sage-foreground/60">
-            {specialities}
-          </p>
-        </div>
-
         {/* Action links */}
         <nav
           aria-label="Links principais"
@@ -131,6 +124,13 @@ function Index() {
             <span>Conhece-me um pouco melhor</span>
           </a>
         </nav>
+
+        {/* Footer */}
+        <footer className="mt-12 animate-fade-in-up delay-500">
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-sage-foreground/70">
+            {specialities}
+          </p>
+        </footer>
 
       </div>
     </main>
