@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Calendar, Instagram } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 
 import { profileConfig } from "@/lib/profile-config";
 
