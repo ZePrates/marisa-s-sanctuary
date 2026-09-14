@@ -124,15 +124,6 @@ function Index() {
           </a>
         </nav>
 
-        {/* Footer */}
-        <footer className="mt-12 animate-fade-in-up delay-500">
-          <p className="text-xs font-medium uppercase tracking-[0.1em] text-sage-foreground/70">
-            {footerLine}
-          </p>
-          <p className="mt-3 max-w-xs text-[0.7rem] leading-relaxed text-sage-foreground/50">
-            {disclaimer}
-          </p>
-        </footer>
       </div>
     </main>
   );
