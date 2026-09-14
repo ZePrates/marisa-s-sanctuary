@@ -3,7 +3,7 @@
 
 export const profileConfig = {
   // Identidade
-  name: "Marisa Isabel Valido dos Santos",
+  name: "Marisa Valido dos Santos",
   title: "Psicóloga Clínica e da Saúde",
   initials: "MS",
 
