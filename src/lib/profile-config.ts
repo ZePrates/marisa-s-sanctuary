@@ -13,7 +13,7 @@ export const profileConfig = {
   specialities: "Exaustão Emocional, Ansiedade e Doenças Crónicas",
 
   // Links
-  bookingUrl: "#", // Substituir pelo link de marcação de consulta
+  bookingUrl: "https://wa.link/w292so?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaeAxuL1QHzog4XwnB7rqXfR7XyfRTmcFiEug3DZBU3kh8qzpFqMvnSCGSCaug_aem_fxDY0MnL-sgRSNEbLyMq0Q",
   instagramUrl: "https://www.instagram.com/marisasantos.psicologa/",
 
   // Rodapé
