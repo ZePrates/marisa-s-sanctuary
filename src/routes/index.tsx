@@ -40,6 +40,7 @@ function Index() {
     title,
     mainQuote,
     secondaryQuote,
+    specialities,
     bookingUrl,
     instagramUrl,
   } = profileConfig;
@@ -89,6 +90,13 @@ function Index() {
         <div className="mt-5 animate-fade-in-up delay-300">
           <p className="text-base leading-relaxed text-sage-foreground/70">
             {secondaryQuote}
+          </p>
+        </div>
+
+        {/* Specialities */}
+        <div className="mt-3 animate-fade-in-up delay-350">
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-sage-foreground/60">
+            {specialities}
           </p>
         </div>
 
