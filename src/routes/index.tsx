@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Calendar, Instagram } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 
 import { profileConfig } from "@/lib/profile-config";
 
@@ -117,7 +117,7 @@ function Index() {
             rel="noopener noreferrer"
             className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-sage/85 px-6 py-4 text-center text-base font-semibold text-sage-foreground shadow-[0_2px_10px_-4px_var(--color-sage)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sage hover:shadow-[0_6px_18px_-6px_var(--color-sage)] active:translate-y-0 active:shadow-[0_2px_8px_-4px_var(--color-sage)]"
           >
-            <Instagram
+            <User
               aria-hidden="true"
               className="h-[1.1em] w-[1.1em] shrink-0 opacity-80 transition-transform duration-300 group-hover:scale-110"
               strokeWidth={2}
