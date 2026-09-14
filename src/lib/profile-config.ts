@@ -10,6 +10,7 @@ export const profileConfig = {
   // Mensagens
   mainQuote: "Um espaço seguro para parar, sentir e recomeçar.",
   secondaryQuote: "Onde cuidar de quem cuida, também importa.",
+  specialities: "Exaustão Emocional, Ansiedade e Doenças Crónicas",
 
   // Links
   bookingUrl: "#", // Substituir pelo link de marcação de consulta
