@@ -122,7 +122,7 @@ function Index() {
               className="h-[1.1em] w-[1.1em] shrink-0 opacity-80 transition-transform duration-300 group-hover:scale-110"
               strokeWidth={2}
             />
-            <span>Instagram</span>
+            <span>Conhece-me um pouco melhor</span>
           </a>
         </nav>
 
