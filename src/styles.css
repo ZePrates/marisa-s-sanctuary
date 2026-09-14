@@ -191,6 +191,31 @@
   }
 }
 
+@keyframes slow-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.05);
+  }
+}
+
+.animate-slow-drift {
+  animation: slow-drift 22s ease-in-out infinite;
+}
+
+.animate-slow-drift-alt {
+  animation: slow-drift 28s ease-in-out infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-slow-drift,
+  .animate-slow-drift-alt {
+    animation: none;
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
