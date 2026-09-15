@@ -13,13 +13,12 @@ export const profileConfig = {
   specialities: "Exaustão Emocional, Ansiedade e Doenças Crónicas",
 
   // Links
-  bookingUrl: "https://api.whatsapp.com/send?phone=351964781039&text=Marca%20a%20tua%20consulta%20e%20cuida%20de%20ti.%F0%9F%92%9A&fbclid=PAT01DUAUVT6twZG9mAmV4dG4DYWVtAjEwAHNydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABpysJDQk-Nv4qGCKiAB0FoDcJDwOygV3BaPrXXog54POdLYuPC7c-frj1L90S_aem_4rN8gqqNIOz5TXomiySbtw",
+  bookingUrl:
+    "https://api.whatsapp.com/send?phone=351964781039&text=Ol%C3%A1%2C%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20a%20marca%C3%A7%C3%A3o%20de%20uma%20consulta%20de%20Psicologia.",
   instagramUrl: "https://www.instagram.com/marisasantos.psicologa/",
 
   // Rodapé
   footerLine: "Psicologia Clínica e da Saúde",
-  disclaimer:
-    "Este espaço não substitui acompanhamento psicológico ou médico.",
 
   // SEO
   seo: {
