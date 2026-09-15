@@ -1,5 +1,6 @@
+```tsx
 import { createFileRoute } from "@tanstack/react-router";
-import { Calendar, User } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
 
 import { profileConfig } from "@/lib/profile-config";
 
@@ -46,109 +47,110 @@ function Index() {
   } = profileConfig;
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center bg-background px-6 py-12">
-      {/* Abstract editorial contours inspired by the reference palette */}
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-12">
+      {/* Elementos decorativos muito discretos */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="animate-slow-drift absolute -right-28 -top-20 h-72 w-56 rounded-[50%] border border-olive/15" />
-        <div className="animate-slow-drift-alt absolute -bottom-36 -left-28 h-96 w-72 rounded-[50%] border border-olive/10" />
-        <div className="absolute left-1/2 top-0 h-16 w-px bg-gradient-to-b from-olive/25 to-transparent" />
+        <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full border border-sage/10" />
+        <div className="absolute -bottom-40 -left-32 h-80 w-80 rounded-full border border-sage/10" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center text-center">
-        {/* Profile placeholder */}
+      <div className="relative z-10 mx-auto flex w-full max-w-[420px] flex-col items-center text-center">
+        {/* Fotografia / placeholder */}
         <div className="animate-soft-scale">
-          <div className="relative rounded-full p-[3px] ring-1 ring-sage/25">
-            <div className="flex h-28 w-28 items-center justify-center rounded-full border border-sage-border bg-creme-light shadow-[0_8px_28px_-14px_var(--color-sage)]">
+          <div className="rounded-full p-[3px] ring-1 ring-sage/20">
+            <div className="flex h-28 w-28 items-center justify-center rounded-full border border-sage-border bg-creme-light shadow-[0_10px_30px_-18px_var(--color-sage)]">
               <span className="font-serif text-3xl font-medium tracking-[0.08em] text-sage-dark">
                 {initials}
               </span>
             </div>
-            {/* Photo replacement note: swap the inner content for an <img /> later */}
           </div>
         </div>
 
-        {/* Name and title */}
+        {/* Identidade */}
         <div className="mt-7 animate-fade-in-up delay-100">
-          <h1 className="font-serif text-[2rem] leading-[1.15] font-semibold tracking-tight text-sage-dark sm:text-[2.25rem]">
+          <h1 className="font-serif text-[2rem] font-semibold leading-[1.1] tracking-tight text-sage-dark sm:text-[2.2rem]">
             {name}
           </h1>
-          <p className="mt-3 text-[0.7rem] font-medium uppercase tracking-[0.22em] text-sage-foreground/75">
+
+          <p className="mt-3 text-[0.68rem] font-medium uppercase tracking-[0.24em] text-sage-foreground/70">
             {title}
           </p>
         </div>
 
-        {/* Divider */}
+        {/* Separador editorial */}
         <div
           aria-hidden="true"
           className="mt-8 flex animate-fade-in-up items-center gap-3 delay-200"
         >
-          <span className="h-px w-10 bg-gradient-to-r from-transparent to-sage/50" />
-          <span className="h-1 w-1 rounded-full bg-sage/60" />
-          <span className="h-px w-10 bg-gradient-to-l from-transparent to-sage/50" />
+          <span className="h-px w-9 bg-sage/30" />
+          <span className="h-1 w-1 rounded-full bg-sage/50" />
+          <span className="h-px w-9 bg-sage/30" />
         </div>
 
-        {/* Main quote */}
+        {/* Mensagem principal */}
         <div className="mt-8 animate-fade-in-up delay-200">
-          <p className="font-serif text-[1.7rem] leading-snug font-semibold text-balance text-olive-deep sm:text-[1.85rem]">
+          <p className="font-serif text-[1.72rem] font-semibold leading-[1.25] text-balance text-olive-deep sm:text-[1.85rem]">
             {mainQuote}
           </p>
         </div>
 
-        {/* Secondary quote */}
+        {/* Mensagem secundária */}
         <div className="mt-5 animate-fade-in-up delay-300">
-          <p className="text-[0.95rem] leading-relaxed text-balance text-sage-foreground/70">
+          <p className="text-[0.94rem] leading-relaxed text-balance text-sage-foreground/70">
             {secondaryQuote}
           </p>
         </div>
 
-        {/* Action links */}
+        {/* Links principais */}
         <nav
           aria-label="Links principais"
-          className="mt-10 flex w-full flex-col gap-4 animate-fade-in-up delay-400"
+          className="mt-10 flex w-full flex-col gap-3.5 animate-fade-in-up delay-400"
         >
+          {/* Ação principal */}
           <a
             href={bookingUrl}
-            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-olive px-6 py-[1.15rem] text-center text-base font-semibold tracking-[0.01em] text-creme-light shadow-[0_3px_14px_-5px_var(--color-olive)] ring-1 ring-inset ring-creme-light/20 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive-deep hover:shadow-[0_10px_24px_-8px_var(--color-olive)] active:translate-y-0 active:shadow-[0_2px_8px_-4px_var(--color-olive)]"
+            className="group flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl bg-olive px-6 py-4 text-center text-[0.98rem] font-semibold tracking-[0.01em] text-creme-light shadow-[0_8px_22px_-12px_var(--color-olive)] ring-1 ring-inset ring-creme-light/15 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive-deep hover:shadow-[0_12px_28px_-12px_var(--color-olive)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0"
           >
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-creme-light/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
-            />
             <Calendar
               aria-hidden="true"
-              className="h-[1.1em] w-[1.1em] shrink-0 opacity-80 transition-transform duration-300 group-hover:scale-110"
+              className="h-[1.05em] w-[1.05em] shrink-0 opacity-80 transition-transform duration-300 group-hover:scale-105"
               strokeWidth={1.75}
             />
             <span>Marcar Consulta</span>
           </a>
 
+          {/* Futura página de apresentação / CV */}
           <a
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl border border-olive/35 bg-olive-muted px-6 py-[1.05rem] text-center text-base font-medium tracking-[0.01em] text-olive-deep shadow-[0_2px_10px_-6px_var(--color-olive)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive/20 hover:shadow-[0_8px_20px_-8px_var(--color-olive)] active:translate-y-0"
+            className="group flex min-h-[54px] w-full items-center justify-center gap-2.5 rounded-2xl border border-olive/25 bg-olive-muted/60 px-6 py-4 text-center text-[0.96rem] font-medium tracking-[0.01em] text-olive-deep transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-olive/40 hover:bg-olive-muted hover:shadow-[0_8px_20px_-14px_var(--color-olive)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0"
           >
-            <User
+            <span>Conhece-me um pouco melhor</span>
+            <ArrowUpRight
               aria-hidden="true"
-              className="h-[1.1em] w-[1.1em] shrink-0 opacity-70 transition-transform duration-300 group-hover:scale-110"
+              className="h-[1em] w-[1em] shrink-0 opacity-60 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               strokeWidth={1.75}
             />
-            <span>Conhece-me um pouco melhor</span>
           </a>
         </nav>
 
-        {/* Footer */}
-        <footer className="mt-14 flex animate-fade-in-up flex-col items-center gap-3 delay-500">
-          <span aria-hidden="true" className="h-px w-12 bg-sage/35" />
-          <p className="text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.2em] text-sage-foreground/60">
+        {/* Especialidades */}
+        <footer className="mt-12 animate-fade-in-up delay-500">
+          <div
+            aria-hidden="true"
+            className="mx-auto mb-4 h-px w-10 bg-sage/25"
+          />
+
+          <p className="max-w-[320px] text-[0.62rem] font-medium uppercase leading-[1.7] tracking-[0.18em] text-sage-foreground/55">
             {specialities}
           </p>
         </footer>
-
       </div>
     </main>
   );
 }
+```
