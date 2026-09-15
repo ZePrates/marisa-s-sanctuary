@@ -47,14 +47,14 @@ function Index() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center bg-background px-6 py-12">
-      {/* Subtle organic shapes in the background */}
+      {/* Abstract editorial contours inspired by the reference palette */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
       >
-        <div className="animate-slow-drift absolute -right-24 -top-24 h-72 w-72 rounded-full bg-sage/10 blur-3xl" />
-        <div className="animate-slow-drift-alt absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-sage/8 blur-3xl" />
-        <div className="animate-slow-drift absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-sage/5 blur-3xl" />
+        <div className="animate-slow-drift absolute -right-28 -top-20 h-72 w-56 rounded-[50%] border border-olive/15" />
+        <div className="animate-slow-drift-alt absolute -bottom-36 -left-28 h-96 w-72 rounded-[50%] border border-olive/10" />
+        <div className="absolute left-1/2 top-0 h-16 w-px bg-gradient-to-b from-olive/25 to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-md flex-col items-center text-center">
@@ -92,7 +92,7 @@ function Index() {
 
         {/* Main quote */}
         <div className="mt-8 animate-fade-in-up delay-200">
-          <p className="font-serif text-[1.6rem] leading-snug font-medium text-balance text-sage-dark sm:text-[1.75rem]">
+          <p className="font-serif text-[1.7rem] leading-snug font-semibold text-balance text-olive-deep sm:text-[1.85rem]">
             {mainQuote}
           </p>
         </div>
@@ -111,7 +111,7 @@ function Index() {
         >
           <a
             href={bookingUrl}
-            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-sage px-6 py-[1.15rem] text-center text-base font-semibold tracking-[0.01em] text-sage-foreground shadow-[0_3px_14px_-5px_var(--color-sage)] ring-1 ring-inset ring-creme-light/30 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-sage-subtle hover:shadow-[0_10px_24px_-8px_var(--color-sage)] active:translate-y-0 active:shadow-[0_2px_8px_-4px_var(--color-sage)]"
+            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl bg-olive px-6 py-[1.15rem] text-center text-base font-semibold tracking-[0.01em] text-creme-light shadow-[0_3px_14px_-5px_var(--color-olive)] ring-1 ring-inset ring-creme-light/20 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive-deep hover:shadow-[0_10px_24px_-8px_var(--color-olive)] active:translate-y-0 active:shadow-[0_2px_8px_-4px_var(--color-olive)]"
           >
             <span
               aria-hidden="true"
@@ -129,7 +129,7 @@ function Index() {
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl border border-sage/40 bg-sage/20 px-6 py-[1.05rem] text-center text-base font-medium tracking-[0.01em] text-sage-dark shadow-[0_2px_10px_-6px_var(--color-sage)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-sage/35 hover:shadow-[0_8px_20px_-8px_var(--color-sage)] active:translate-y-0"
+            className="group relative flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-2xl border border-olive/35 bg-olive-muted px-6 py-[1.05rem] text-center text-base font-medium tracking-[0.01em] text-olive-deep shadow-[0_2px_10px_-6px_var(--color-olive)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive/20 hover:shadow-[0_8px_20px_-8px_var(--color-olive)] active:translate-y-0"
           >
             <User
               aria-hidden="true"
