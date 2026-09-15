@@ -1,4 +1,3 @@
-```tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Calendar } from "lucide-react";
 
@@ -153,4 +152,3 @@ function Index() {
     </main>
   );
 }
-```
