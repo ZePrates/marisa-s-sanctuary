@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Calendar } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Calendar } from "lucide-react";
 
 import { profileConfig } from "@/lib/profile-config";
 
@@ -42,7 +42,6 @@ function Index() {
     secondaryQuote,
     specialities,
     bookingUrl,
-    instagramUrl,
   } = profileConfig;
 
   return (
@@ -121,20 +120,18 @@ function Index() {
             <span>Marcar Consulta</span>
           </a>
 
-          {/* Futura página de apresentação / CV */}
-          <a
-            href={instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Página de apresentação / percurso */}
+          <Link
+            to="/conhece-me"
             className="group flex min-h-[54px] w-full items-center justify-center gap-2.5 rounded-2xl border border-olive/25 bg-olive-muted/60 px-6 py-4 text-center text-[0.96rem] font-medium tracking-[0.01em] text-olive-deep transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-olive/40 hover:bg-olive-muted hover:shadow-[0_8px_20px_-14px_var(--color-olive)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0"
           >
             <span>Conhece-me um pouco melhor</span>
-            <ArrowUpRight
+            <ArrowRight
               aria-hidden="true"
-              className="h-[1em] w-[1em] shrink-0 opacity-60 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              className="h-[1em] w-[1em] shrink-0 opacity-60 transition-transform duration-300 group-hover:translate-x-0.5"
               strokeWidth={1.75}
             />
-          </a>
+          </Link>
         </nav>
 
         {/* Especialidades */}

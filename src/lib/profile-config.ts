@@ -26,4 +26,45 @@ export const profileConfig = {
     description:
       "Um espaço seguro para parar, sentir e recomeçar. Psicologia Clínica e da Saúde.",
   },
+
+  // Página "Conhece-me um pouco melhor" (/conhece-me)
+  about: {
+    intro:
+      "Um pouco sobre mim, o meu percurso e a forma como acompanho cada pessoa.",
+    sections: [
+      {
+        title: "Quem sou",
+        paragraphs: [
+          "A psicologia é, para mim, um espaço de escuta, compreensão e construção de novas formas de lidar com aquilo que nos acontece. Cada pessoa traz consigo uma história única, e acredito que o acompanhamento psicológico deve respeitar esse ritmo e essa singularidade.",
+        ],
+      },
+      {
+        title: "Percurso",
+        items: [
+          "Licenciatura em Psicologia pela Universidade de Évora.",
+          "Mestrado em Psicologia Clínica e da Saúde.",
+          "Estágio no Serviço de Oncologia do Hospital do Espírito Santo de Évora.",
+        ],
+      },
+      {
+        title: "Experiência e áreas de intervenção",
+        paragraphs: [
+          "Experiência profissional com pessoas idosas e ex-combatentes, nomeadamente no Núcleo de Évora da Liga dos Combatentes.",
+          "Intervenção centrada, entre outras áreas, na exaustão emocional, ansiedade e vivência da doença crónica.",
+        ],
+      },
+      {
+        title: "A forma como trabalho",
+        emphasis: true,
+        paragraphs: [
+          "Procuro criar um espaço seguro e sem julgamentos, onde seja possível parar, compreender o que se está a sentir e encontrar, em conjunto, caminhos que façam sentido para cada pessoa.",
+        ],
+      },
+    ],
+    seo: {
+      title: "Marisa Valido dos Santos | Um pouco sobre mim",
+      description:
+        "Percurso, experiência e forma de trabalhar de Marisa Valido dos Santos, Psicóloga Clínica e da Saúde.",
+    },
+  },
 } as const;
