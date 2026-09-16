@@ -36,7 +36,7 @@ export const profileConfig = {
         title: "Quem sou",
         paragraphs: [
           "Sou a Marisa Valido dos Santos, psicóloga clínica e da saúde, com percurso académico e experiência prática voltada para o cuidado integral de cada pessoa. Acompanho adolescentes, adultos e idosos, procurando criar um espaço seguro, acolhedor e sem julgamentos onde seja possível parar, sentir e recomeçar.",
-          "A psicologia é, para mim, um espaço de escuta, compreensão e construção de novas formas de lidar com aquilo que nos acontece. Cada pessoa traz consigo uma história única, e acredito que o acompanhamento psicológico deve respeitar esse ritmo e essa singularidade.",
+          "\n",
         ],
       },
       {
