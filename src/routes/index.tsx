@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar } from "lucide-react";
 
+import marisaFotoCapaAsset from "@/assets/marisa-foto-capa.jpg.asset.json";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/")({
@@ -35,7 +36,6 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const {
-    initials,
     name,
     title,
     mainQuote,
@@ -56,14 +56,14 @@ function Index() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[420px] flex-col items-center text-center">
-        {/* Fotografia / placeholder */}
+        {/* Fotografia de capa */}
         <div className="animate-soft-scale">
           <div className="rounded-full p-[3px] ring-1 ring-sage/20">
-            <div className="flex h-28 w-28 items-center justify-center rounded-full border border-sage-border bg-creme-light shadow-[0_10px_30px_-18px_var(--color-sage)]">
-              <span className="font-serif text-3xl font-medium tracking-[0.08em] text-sage-dark">
-                {initials}
-              </span>
-            </div>
+            <img
+              src={marisaFotoCapaAsset.url}
+              alt={`Fotografia de ${name}`}
+              className="h-28 w-28 rounded-full border border-sage-border object-cover shadow-[0_10px_30px_-18px_var(--color-sage)]"
+            />
           </div>
         </div>
 
