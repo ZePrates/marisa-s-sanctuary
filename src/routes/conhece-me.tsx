@@ -35,7 +35,7 @@ export const Route = createFileRoute("/conhece-me")({
 });
 
 function ConheceMe() {
-  const { initials, name, title, bookingUrl, about } = profileConfig;
+  const { name, title, bookingUrl, about } = profileConfig;
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-12">
@@ -46,14 +46,14 @@ function ConheceMe() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[420px] flex-col items-center text-center">
-        {/* Fotografia / placeholder */}
+        {/* Fotografia de capa */}
         <div className="animate-soft-scale">
           <div className="rounded-full p-[3px] ring-1 ring-sage/20">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full border border-sage-border bg-creme-light shadow-[0_10px_30px_-18px_var(--color-sage)]">
-              <span className="font-serif text-2xl font-medium tracking-[0.08em] text-sage-dark">
-                {initials}
-              </span>
-            </div>
+            <img
+              src={marisaFotoCapaAsset.url}
+              alt={`Fotografia de ${name}`}
+              className="h-24 w-24 rounded-full border border-sage-border object-cover shadow-[0_10px_30px_-18px_var(--color-sage)]"
+            />
           </div>
         </div>
 
