@@ -87,16 +87,26 @@ function ConheceMe() {
 
         {/* Blocos de conteúdo */}
         <div className="mt-9 flex w-full flex-col gap-5 text-left">
-          {about.sections.map((section, index) => (
-            <section
-              key={section.title}
-              className={`animate-fade-in-up rounded-2xl p-6 ${
-                "emphasis" in section && section.emphasis
-                  ? "border border-olive/20 bg-olive-muted/40"
-                  : "border border-sage-border/60 bg-creme-light/60"
-              }`}
-              style={{ animationDelay: `${300 + index * 100}ms` }}
-            >
+          {about.sections.map((section, index) => {
+            // Gradiente progressivo de cor: cada caixa fica ligeiramente mais
+            // profunda, mantendo a última (ênfase) como ponto alto.
+            const variants = [
+              "border border-sage-border/60 bg-creme-light/60",
+              "border border-olive/15 bg-olive-muted/25",
+              "border border-olive/20 bg-olive-muted/40",
+              "border border-olive/25 bg-olive-muted/55",
+            ];
+            const emphasisClass =
+              "emphasis" in section && section.emphasis
+                ? "border border-olive/30 bg-olive-muted/65"
+                : variants[index % variants.length];
+
+            return (
+              <section
+                key={section.title}
+                className={`animate-fade-in-up rounded-2xl p-6 ${emphasisClass}`}
+                style={{ animationDelay: `${300 + index * 100}ms` }}
+              >
               <h2 className="font-serif text-[1.15rem] font-semibold text-olive-deep">
                 {section.title}
               </h2>
