@@ -85,8 +85,8 @@ function ConheceMe() {
           </p>
         </div>
 
-        {/* Composição editorial contínua */}
-        <div className="mt-14 flex w-full flex-col text-left">
+        {/* Composição em caixinhas editoriais */}
+        <div className="mt-14 flex w-full flex-col gap-5 text-left">
           {about.sections.map((section, index) => {
             const isEmphasis = "emphasis" in section && section.emphasis;
 
@@ -94,21 +94,21 @@ function ConheceMe() {
               <section
                 key={section.title}
                 aria-label={section.title}
-                className={`animate-fade-in-up ${
-                  index > 0 ? "mt-12 border-t border-sage/15 pt-12" : ""
+                className={`animate-fade-in-up rounded-2xl border border-sage/10 bg-olive-muted/25 p-6 shadow-[0_4px_24px_-18px_var(--color-olive)] ${
+                  isEmphasis ? "border-l-2 border-l-olive/25 pl-5" : ""
                 }`}
                 style={{ animationDelay: `${300 + index * 100}ms` }}
               >
-                <h2 className="font-serif text-[1.2rem] font-semibold text-olive-deep">
+                <h2 className="font-serif text-[1.15rem] font-semibold text-olive-deep">
                   {section.title}
                 </h2>
 
                 {"paragraphs" in section && !isEmphasis && (
-                  <div className="mt-5 flex flex-col gap-4">
+                  <div className="mt-4 flex flex-col gap-3.5">
                     {section.paragraphs.map((paragraph) => (
                       <p
                         key={paragraph}
-                        className="text-left text-[0.93rem] leading-[1.85] text-sage-foreground/80"
+                        className="text-justify text-[0.92rem] leading-[1.8] text-sage-foreground/80"
                       >
                         {paragraph}
                       </p>
@@ -117,7 +117,7 @@ function ConheceMe() {
                 )}
 
                 {"items" in section && (
-                  <ul className="relative mt-5 flex flex-col gap-4">
+                  <ul className="relative mt-4 flex flex-col gap-3">
                     {/* Linha vertical extremamente subtil entre os itens */}
                     <span
                       aria-hidden="true"
@@ -126,11 +126,11 @@ function ConheceMe() {
                     {section.items.map((item) => (
                       <li
                         key={item}
-                        className="relative flex items-start gap-3.5 text-left text-[0.93rem] leading-[1.8] text-sage-foreground/80"
+                        className="relative flex items-start gap-3 text-justify text-[0.92rem] leading-[1.75] text-sage-foreground/80"
                       >
                         <span
                           aria-hidden="true"
-                          className="relative z-10 mt-[0.62em] h-1.5 w-1.5 shrink-0 rounded-full border border-sage/40 bg-background"
+                          className="relative z-10 mt-[0.58em] h-1.5 w-1.5 shrink-0 rounded-full border border-sage/40 bg-olive-muted/50"
                         />
                         {item}
                       </li>
@@ -139,18 +139,18 @@ function ConheceMe() {
                 )}
 
                 {"paragraphs" in section && isEmphasis && (
-                  <div className="relative mt-6 border-l-2 border-olive/30 py-1 pl-6">
+                  <div className="relative mt-4 border-l-2 border-olive/20 py-1 pl-5">
                     <span
                       aria-hidden="true"
-                      className="absolute -left-1 -top-5 font-serif text-4xl leading-none text-olive/25"
+                      className="absolute -left-1 -top-4 font-serif text-3xl leading-none text-olive/20"
                     >
                       &ldquo;
                     </span>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-3.5">
                       {section.paragraphs.map((paragraph) => (
                         <p
                           key={paragraph}
-                          className="text-left text-[0.95rem] leading-[1.85] text-olive-deep/90"
+                          className="text-justify text-[0.93rem] leading-[1.8] text-olive-deep/90"
                         >
                           {paragraph}
                         </p>
