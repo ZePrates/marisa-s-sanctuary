@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Calendar, ArrowLeft } from "lucide-react";
+import { ArrowLeft, Calendar } from "lucide-react";
 
 import marisaFotoCapaAsset from "@/assets/marisa-foto-capa.jpg.asset.json";
+import { cn } from "@/lib/utils";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/conhece-me")({
@@ -34,11 +35,53 @@ export const Route = createFileRoute("/conhece-me")({
   component: ConheceMe,
 });
 
+const cardStyles = [
+  {
+    // Quem sou: tom sálvia suave, com moldura flutuante
+    container:
+      "relative rounded-2xl border border-sage/20 bg-sage-soft p-7 shadow-sm transition-transform duration-500 ease-out hover:-translate-y-0.5",
+    deco: "pointer-events-none absolute -bottom-2 -right-2 -z-10 h-full w-full rounded-2xl border border-olive/10",
+    title: "font-serif text-[1.2rem] font-semibold italic leading-tight text-olive-deep",
+    body: "text-left text-[0.93rem] leading-[1.75] text-sage-foreground/85",
+  },
+  {
+    // O meu percurso: olive profundo, texto claro
+    container:
+      "rounded-2xl bg-olive-card p-7 shadow-xl transition-transform duration-500 ease-out hover:-translate-y-0.5",
+    title: "font-serif text-[1.2rem] font-semibold italic leading-tight text-creme-light",
+    body: "text-left text-[0.93rem] leading-[1.75] text-creme-light/90",
+    markerBorder: "border-creme-light/50",
+    markerBg: "bg-creme-light/25",
+    line: "bg-creme-light/20",
+  },
+  {
+    // Experiência e áreas: creme quente com traço lateral
+    container:
+      "rounded-2xl border-l-4 border-sage-accent bg-sage-cream p-7 transition-transform duration-500 ease-out hover:-translate-y-0.5",
+    title: "font-serif text-[1.2rem] font-semibold italic leading-tight text-olive-deep",
+    body: "text-left text-[0.93rem] leading-[1.75] text-sage-foreground/85",
+    markerBorder: "border-sage/40",
+    markerBg: "bg-sage/25",
+    line: "bg-sage/20",
+  },
+  {
+    // A forma como trabalho: olive profundo, maior destaque
+    container:
+      "relative rounded-2xl bg-olive-card p-7 shadow-xl transition-transform duration-500 ease-out hover:-translate-y-0.5",
+    title: "font-serif text-[1.25rem] font-semibold italic leading-tight text-creme-light",
+    body: "text-left text-[0.94rem] leading-[1.8] text-creme-light/90",
+    quote: "text-creme-light/15",
+    markerBorder: "border-creme-light/50",
+    markerBg: "bg-creme-light/25",
+    line: "bg-creme-light/20",
+  },
+];
+
 function ConheceMe() {
   const { name, title, bookingUrl, about } = profileConfig;
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-12">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-12 sm:py-16">
       {/* Elementos decorativos muito discretos, iguais à home */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full border border-sage/10" />
@@ -85,31 +128,29 @@ function ConheceMe() {
           </p>
         </div>
 
-        {/* Composição em caixinhas editoriais */}
-        <div className="mt-14 flex w-full flex-col gap-5 text-left">
+        {/* Secções em caixinhas com várias tonalidades */}
+        <div className="mt-14 flex w-full flex-col gap-8 text-left">
           {about.sections.map((section, index) => {
+            const style = cardStyles[index % cardStyles.length]!;
             const isEmphasis = "emphasis" in section && section.emphasis;
 
             return (
               <section
                 key={section.title}
                 aria-label={section.title}
-                className={`animate-fade-in-up rounded-2xl border border-sage/10 bg-olive-muted/25 p-6 shadow-[0_4px_24px_-18px_var(--color-olive)] ${
-                  isEmphasis ? "border-l-2 border-l-olive/25 pl-5" : ""
-                }`}
+                className={cn("animate-fade-in-up", style.container)}
                 style={{ animationDelay: `${300 + index * 100}ms` }}
               >
-                <h2 className="font-serif text-[1.15rem] font-semibold text-olive-deep">
-                  {section.title}
-                </h2>
+                {index === 0 && (
+                  <span aria-hidden="true" className={cn("hidden sm:block", style.deco)} />
+                )}
+
+                <h2 className={cn(style.title)}>{section.title}</h2>
 
                 {"paragraphs" in section && !isEmphasis && (
                   <div className="mt-4 flex flex-col gap-3.5">
                     {section.paragraphs.map((paragraph) => (
-                      <p
-                        key={paragraph}
-                        className="text-justify text-[0.92rem] leading-[1.8] text-sage-foreground/80"
-                      >
+                      <p key={paragraph} className={cn(style.body)}>
                         {paragraph}
                       </p>
                     ))}
@@ -121,16 +162,26 @@ function ConheceMe() {
                     {/* Linha vertical extremamente subtil entre os itens */}
                     <span
                       aria-hidden="true"
-                      className="absolute bottom-[6px] left-[2.5px] top-[6px] w-px bg-sage/20"
+                      className={cn(
+                        "absolute bottom-[6px] left-[2.5px] top-[6px] w-px",
+                        style.line,
+                      )}
                     />
                     {section.items.map((item) => (
                       <li
                         key={item}
-                        className="relative flex items-start gap-3 text-justify text-[0.92rem] leading-[1.75] text-sage-foreground/80"
+                        className={cn(
+                          "relative flex items-start gap-3 text-[0.92rem] leading-[1.75]",
+                          style.body,
+                        )}
                       >
                         <span
                           aria-hidden="true"
-                          className="relative z-10 mt-[0.58em] h-1.5 w-1.5 shrink-0 rounded-full border border-sage/40 bg-olive-muted/50"
+                          className={cn(
+                            "relative z-10 mt-[0.58em] h-1.5 w-1.5 shrink-0 rounded-full border",
+                            style.markerBorder,
+                            style.markerBg,
+                          )}
                         />
                         {item}
                       </li>
@@ -139,19 +190,19 @@ function ConheceMe() {
                 )}
 
                 {"paragraphs" in section && isEmphasis && (
-                  <div className="relative mt-4 border-l-2 border-olive/20 py-1 pl-5">
+                  <div className="relative mt-5 border-l-2 border-creme-light/20 py-1 pl-5">
                     <span
                       aria-hidden="true"
-                      className="absolute -left-1 -top-4 font-serif text-3xl leading-none text-olive/20"
+                      className={cn(
+                        "absolute -left-1 -top-4 font-serif text-3xl leading-none",
+                        style.quote,
+                      )}
                     >
                       &ldquo;
                     </span>
                     <div className="flex flex-col gap-3.5">
                       {section.paragraphs.map((paragraph) => (
-                        <p
-                          key={paragraph}
-                          className="text-justify text-[0.93rem] leading-[1.8] text-olive-deep/90"
-                        >
+                        <p key={paragraph} className={cn(style.body)}>
                           {paragraph}
                         </p>
                       ))}
