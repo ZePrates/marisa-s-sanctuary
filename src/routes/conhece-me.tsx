@@ -94,8 +94,8 @@ function ConheceMe() {
               <section
                 key={section.title}
                 aria-label={section.title}
-                className={`animate-fade-in-up rounded-2xl border border-sage/10 bg-olive-muted/25 p-6 shadow-[0_4px_24px_-18px_var(--color-olive)] $${
-                  isEmphasis ? "border-l-olive/25" : ""
+                className={`animate-fade-in-up rounded-2xl border border-sage/10 bg-olive-muted/25 p-6 shadow-[0_4px_24px_-18px_var(--color-olive)] ${
+                  isEmphasis ? "border-l-2 border-l-olive/25 pl-5" : ""
                 }`}
                 style={{ animationDelay: `${300 + index * 100}ms` }}
               >
