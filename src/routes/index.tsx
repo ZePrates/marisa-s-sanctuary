@@ -62,7 +62,7 @@ function Index() {
             <img
               src={marisaFotoCapaAsset.url}
               alt={`Fotografia de ${name}`}
-              className="h-28 w-28 rounded-full border border-sage-border object-cover object-[center_30%] shadow-[0_10px_30px_-18px_var(--color-sage)]"
+              className="h-28 w-28 rounded-full border border-sage-border object-cover object-[center_24%] shadow-[0_10px_30px_-18px_var(--color-sage)]"
             />
           </div>
         </div>
