@@ -72,6 +72,12 @@
   --color-olive-deep: var(--olive-deep);
   --color-olive-muted: var(--olive-muted);
 
+  --color-sage-soft: var(--sage-soft);
+  --color-sage-cream: var(--sage-cream);
+  --color-olive-card: var(--olive-card);
+  --color-sage-accent: var(--sage-accent);
+
+
   --font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
   --font-sans: "Karla", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
@@ -110,6 +116,12 @@
   --olive: oklch(0.46 0.05 105);
   --olive-deep: oklch(0.34 0.025 125);
   --olive-muted: oklch(0.46 0.05 105 / 12%);
+
+  --sage-soft: oklch(0.93 0.015 125);
+  --sage-cream: oklch(0.95 0.012 95);
+  --olive-card: oklch(0.42 0.05 135);
+  --sage-accent: oklch(0.72 0.04 140);
+
 
   /* shadcn chart defaults */
   --chart-1: oklch(0.646 0.222 41.116);
