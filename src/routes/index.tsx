@@ -36,7 +36,6 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const {
-    initials,
     name,
     title,
     mainQuote,
