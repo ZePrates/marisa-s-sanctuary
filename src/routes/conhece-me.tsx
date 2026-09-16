@@ -118,7 +118,7 @@ function ConheceMe() {
                   {section.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-[0.92rem] leading-relaxed text-sage-foreground/80"
+                      className="flex items-start gap-2.5 text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
                     >
                       <span
                         aria-hidden="true"
