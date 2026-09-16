@@ -40,11 +40,11 @@ export const profileConfig = {
         ],
       },
       {
-        title: "Percurso",
+        title: "O meu percurso",
         items: [
           "Licenciatura em Psicologia pela Universidade de Évora.",
           "Mestrado em Psicologia Clínica e da Saúde.",
-          "Estágio no Serviço de Oncologia do Hospital do Espírito Santo de Évora.",
+          "Especialidade .....",
         ],
       },
       {
