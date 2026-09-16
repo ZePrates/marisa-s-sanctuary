@@ -141,7 +141,7 @@ function Index() {
             className="mx-auto mb-4 h-px w-10 bg-sage/25"
           />
 
-          <p className="max-w-[320px] text-[0.62rem] font-medium uppercase leading-[1.7] tracking-[0.18em] text-sage-foreground/55">
+          <p className="whitespace-nowrap text-[0.62rem] font-medium uppercase leading-[1.7] tracking-[0.14em] text-sage-foreground/55">
             {specialities}
           </p>
         </footer>
