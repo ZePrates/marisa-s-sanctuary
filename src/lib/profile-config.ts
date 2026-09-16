@@ -23,12 +23,14 @@ export const profileConfig = {
   // SEO
   seo: {
     title: "Marisa Isabel Valido dos Santos | Psicóloga Clínica e da Saúde",
-    description: "Um espaço seguro para parar, sentir e recomeçar. Psicologia Clínica e da Saúde.",
+    description:
+      "Um espaço seguro para parar, sentir e recomeçar. Psicologia Clínica e da Saúde.",
   },
 
   // Página "Conhece-me um pouco melhor" (/conhece-me)
   about: {
-    intro: "Um pouco sobre mim, o meu percurso e a forma como acompanho cada pessoa.",
+    intro:
+      "Um pouco sobre mim, o meu percurso e a forma como acompanho cada pessoa.",
     sections: [
       {
         title: "Quem sou",
