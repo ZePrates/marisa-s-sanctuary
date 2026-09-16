@@ -139,7 +139,7 @@ function ConheceMe() {
         {/* Secções em caixinhas com várias tonalidades */}
         <div className="mt-14 flex w-full flex-col gap-8 text-left">
           {about.sections.map((section, index) => {
-            const style = cardStyles[index % cardStyles.length];
+            const style = cardStyles[index % cardStyles.length]!;
             const isEmphasis = "emphasis" in section && section.emphasis;
 
             return (
