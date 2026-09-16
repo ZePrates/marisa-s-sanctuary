@@ -105,7 +105,7 @@ function ConheceMe() {
                   {section.paragraphs.map((paragraph) => (
                     <p
                       key={paragraph}
-                      className="text-[0.92rem] leading-relaxed text-sage-foreground/80"
+                      className="text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
                     >
                       {paragraph}
                     </p>
