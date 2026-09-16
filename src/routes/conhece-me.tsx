@@ -40,18 +40,15 @@ const cardStyles = [
     // Quem sou: tom sálvia suave, com moldura flutuante
     container:
       "relative rounded-2xl border border-sage/20 bg-sage-soft p-7 shadow-sm transition-transform duration-500 ease-out hover:-translate-y-0.5",
-    deco:
-      "pointer-events-none absolute -bottom-2 -right-2 -z-10 h-full w-full rounded-2xl border border-olive/10",
-    title:
-      "font-serif text-[1.2rem] font-semibold italic leading-tight text-olive-deep",
+    deco: "pointer-events-none absolute -bottom-2 -right-2 -z-10 h-full w-full rounded-2xl border border-olive/10",
+    title: "font-serif text-[1.2rem] font-semibold italic leading-tight text-olive-deep",
     body: "text-left text-[0.93rem] leading-[1.75] text-sage-foreground/85",
   },
   {
     // O meu percurso: olive profundo, texto claro
     container:
       "rounded-2xl bg-olive-card p-7 shadow-xl transition-transform duration-500 ease-out hover:-translate-y-0.5",
-    title:
-      "font-serif text-[1.2rem] font-semibold italic leading-tight text-creme-light",
+    title: "font-serif text-[1.2rem] font-semibold italic leading-tight text-creme-light",
     body: "text-left text-[0.93rem] leading-[1.75] text-creme-light/90",
     markerBorder: "border-creme-light/50",
     markerBg: "bg-creme-light/25",
@@ -61,8 +58,7 @@ const cardStyles = [
     // Experiência e áreas: creme quente com traço lateral
     container:
       "rounded-2xl border-l-4 border-sage-accent bg-sage-cream p-7 transition-transform duration-500 ease-out hover:-translate-y-0.5",
-    title:
-      "font-serif text-[1.2rem] font-semibold italic leading-tight text-olive-deep",
+    title: "font-serif text-[1.2rem] font-semibold italic leading-tight text-olive-deep",
     body: "text-left text-[0.93rem] leading-[1.75] text-sage-foreground/85",
     markerBorder: "border-sage/40",
     markerBg: "bg-sage/25",
@@ -72,8 +68,7 @@ const cardStyles = [
     // A forma como trabalho: olive profundo, maior destaque
     container:
       "relative rounded-2xl bg-olive-card p-7 shadow-xl transition-transform duration-500 ease-out hover:-translate-y-0.5",
-    title:
-      "font-serif text-[1.25rem] font-semibold italic leading-tight text-creme-light",
+    title: "font-serif text-[1.25rem] font-semibold italic leading-tight text-creme-light",
     body: "text-left text-[0.94rem] leading-[1.8] text-creme-light/90",
     quote: "text-creme-light/15",
     markerBorder: "border-creme-light/50",
@@ -88,10 +83,7 @@ function ConheceMe() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-12 sm:py-16">
       {/* Elementos decorativos muito discretos, iguais à home */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-      >
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full border border-sage/10" />
         <div className="absolute -bottom-40 -left-32 h-80 w-80 rounded-full border border-sage/10" />
       </div>
@@ -150,10 +142,7 @@ function ConheceMe() {
                 style={{ animationDelay: `${300 + index * 100}ms` }}
               >
                 {index === 0 && (
-                  <span
-                    aria-hidden="true"
-                    className={cn("hidden sm:block", style.deco)}
-                  />
+                  <span aria-hidden="true" className={cn("hidden sm:block", style.deco)} />
                 )}
 
                 <h2 className={cn(style.title)}>{section.title}</h2>

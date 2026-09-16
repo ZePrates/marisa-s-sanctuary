@@ -77,10 +77,8 @@
   --color-olive-card: var(--olive-card);
   --color-sage-accent: var(--sage-accent);
 
-
   --font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
-  --font-sans: "Karla", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  --font-sans: "Karla", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 :root {
@@ -121,7 +119,6 @@
   --sage-cream: oklch(0.95 0.012 95);
   --olive-card: oklch(0.42 0.05 135);
   --sage-accent: oklch(0.72 0.04 140);
-
 
   /* shadcn chart defaults */
   --chart-1: oklch(0.646 0.222 41.116);
