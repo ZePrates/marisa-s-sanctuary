@@ -57,7 +57,7 @@ export const profileConfig = {
         title: "A forma como trabalho",
         emphasis: true,
         paragraphs: [
-          "Procuro criar um espaço seguro e sem julgamentos, onde seja possível parar, compreender o que se está a sentir e encontrar, em conjunto, caminhos que façam sentido para cada pessoa.",
+          "A psicologia é, para mim, um espaço de escuta, compreensão e construção de novas formas de lidar com aquilo que nos acontece. Cada pessoa traz consigo uma história única, e acredito que o acompanhamento psicológico deve respeitar esse ritmo e essa singularidade.\nProcuro criar um espaço seguro e sem julgamentos, onde seja possível parar, compreender o que se está a sentir e encontrar, em conjunto, caminhos que façam sentido para cada pessoa.",
         ],
       },
     ],
