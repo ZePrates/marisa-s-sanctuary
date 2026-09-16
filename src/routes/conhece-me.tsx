@@ -79,7 +79,7 @@ function ConheceMe() {
 
         {/* Frase introdutória */}
         <div className="mt-6 animate-fade-in-up delay-200">
-          <p className="text-[0.98rem] leading-relaxed text-balance text-sage-foreground/80">
+          <p className="text-justify text-[0.98rem] leading-relaxed text-balance text-sage-foreground/80">
             {about.intro}
           </p>
         </div>
@@ -118,7 +118,7 @@ function ConheceMe() {
                   {section.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-[0.92rem] leading-relaxed text-sage-foreground/80"
+                      className="flex items-start gap-2.5 text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
                     >
                       <span
                         aria-hidden="true"
