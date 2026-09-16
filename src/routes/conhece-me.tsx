@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Calendar, ArrowLeft } from "lucide-react";
 
+import marisaFotoCapaAsset from "@/assets/marisa-foto-capa.jpg.asset.json";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/conhece-me")({
@@ -34,7 +35,7 @@ export const Route = createFileRoute("/conhece-me")({
 });
 
 function ConheceMe() {
-  const { initials, name, title, bookingUrl, about } = profileConfig;
+  const { name, title, bookingUrl, about } = profileConfig;
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-12">
@@ -45,14 +46,14 @@ function ConheceMe() {
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-[420px] flex-col items-center text-center">
-        {/* Fotografia / placeholder */}
+        {/* Fotografia */}
         <div className="animate-soft-scale">
           <div className="rounded-full p-[3px] ring-1 ring-sage/20">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full border border-sage-border bg-creme-light shadow-[0_10px_30px_-18px_var(--color-sage)]">
-              <span className="font-serif text-2xl font-medium tracking-[0.08em] text-sage-dark">
-                {initials}
-              </span>
-            </div>
+            <img
+              src={marisaFotoCapaAsset.url}
+              alt={`Fotografia de ${name}`}
+              className="h-24 w-24 rounded-full border border-sage-border object-cover shadow-[0_10px_30px_-18px_var(--color-sage)]"
+            />
           </div>
         </div>
 
@@ -78,65 +79,94 @@ function ConheceMe() {
         </div>
 
         {/* Frase introdutória */}
-        <div className="mt-6 animate-fade-in-up delay-200">
+        <div className="mt-7 animate-fade-in-up delay-200">
           <p className="text-center text-[0.98rem] leading-relaxed text-balance text-sage-foreground/80">
             {about.intro}
           </p>
         </div>
 
-        {/* Blocos de conteúdo */}
-        <div className="mt-9 flex w-full flex-col gap-5 text-left">
-          {about.sections.map((section, index) => (
-            <section
-              key={section.title}
-              className={`animate-fade-in-up rounded-2xl p-6 ${
-                "emphasis" in section && section.emphasis
-                  ? "border border-olive/20 bg-olive-muted/40"
-                  : "border border-sage-border/60 bg-creme-light/60"
-              }`}
-              style={{ animationDelay: `${300 + index * 100}ms` }}
-            >
-              <h2 className="font-serif text-[1.15rem] font-semibold text-olive-deep">
-                {section.title}
-              </h2>
+        {/* Composição editorial contínua */}
+        <div className="mt-14 flex w-full flex-col text-left">
+          {about.sections.map((section, index) => {
+            const isEmphasis = "emphasis" in section && section.emphasis;
 
-              {"paragraphs" in section && (
-                <div className="mt-3 flex flex-col gap-3">
-                  {section.paragraphs.map((paragraph) => (
-                    <p
-                      key={paragraph}
-                      className="text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              )}
+            return (
+              <section
+                key={section.title}
+                aria-label={section.title}
+                className={`animate-fade-in-up ${
+                  index > 0 ? "mt-12 border-t border-sage/15 pt-12" : ""
+                }`}
+                style={{ animationDelay: `${300 + index * 100}ms` }}
+              >
+                <h2 className="font-serif text-[1.2rem] font-semibold text-olive-deep">
+                  {section.title}
+                </h2>
 
-              {"items" in section && (
-                <ul className="mt-3 flex flex-col gap-2">
-                  {section.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2.5 text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
+                {"paragraphs" in section && !isEmphasis && (
+                  <div className="mt-5 flex flex-col gap-4">
+                    {section.paragraphs.map((paragraph) => (
+                      <p
+                        key={paragraph}
+                        className="text-left text-[0.93rem] leading-[1.85] text-sage-foreground/80"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                {"items" in section && (
+                  <ul className="relative mt-5 flex flex-col gap-4">
+                    {/* Linha vertical extremamente subtil entre os itens */}
+                    <span
+                      aria-hidden="true"
+                      className="absolute bottom-[6px] left-[2.5px] top-[6px] w-px bg-sage/20"
+                    />
+                    {section.items.map((item) => (
+                      <li
+                        key={item}
+                        className="relative flex items-start gap-3.5 text-left text-[0.93rem] leading-[1.8] text-sage-foreground/80"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="relative z-10 mt-[0.62em] h-1.5 w-1.5 shrink-0 rounded-full border border-sage/40 bg-background"
+                        />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {"paragraphs" in section && isEmphasis && (
+                  <div className="relative mt-6 border-l-2 border-olive/30 py-1 pl-6">
+                    <span
+                      aria-hidden="true"
+                      className="absolute -left-1 -top-5 font-serif text-4xl leading-none text-olive/25"
                     >
-                      <span
-                        aria-hidden="true"
-                        className="mt-2 h-1 w-1 shrink-0 rounded-full bg-sage/60"
-                      />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          ))}
+                      &ldquo;
+                    </span>
+                    <div className="flex flex-col gap-4">
+                      {section.paragraphs.map((paragraph) => (
+                        <p
+                          key={paragraph}
+                          className="text-left text-[0.95rem] leading-[1.85] text-olive-deep/90"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </section>
+            );
+          })}
         </div>
 
         {/* Botões finais */}
         <nav
           aria-label="Ações"
-          className="mt-9 flex w-full flex-col gap-3.5 animate-fade-in-up delay-700"
+          className="mt-14 flex w-full flex-col gap-3.5 animate-fade-in-up delay-700"
         >
           <a
             href={bookingUrl}
