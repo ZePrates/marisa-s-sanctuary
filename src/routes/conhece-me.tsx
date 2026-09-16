@@ -141,7 +141,8 @@ function ConheceMe() {
                 </ul>
               )}
             </section>
-          ))}
+          );
+        })}
         </div>
 
         {/* Botões finais */}
