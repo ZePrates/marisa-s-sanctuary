@@ -42,6 +42,8 @@ function Index() {
     secondaryQuote,
     specialities,
     bookingUrl,
+    instagramUrl,
+    linkedinUrl,
   } = profileConfig;
 
   return (
