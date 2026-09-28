@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Instagram, Linkedin } from "lucide-react";
 
 import marisaFotoCapaAsset from "@/assets/marisa-foto-capa.jpg.asset.json";
 import { profileConfig } from "@/lib/profile-config";
