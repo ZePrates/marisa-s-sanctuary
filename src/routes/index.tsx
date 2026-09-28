@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Instagram, Linkedin } from "lucide-react";
 
 import marisaFotoCapaAsset from "@/assets/marisa-foto-capa.jpg.asset.json";
 import { profileConfig } from "@/lib/profile-config";
@@ -42,6 +42,8 @@ function Index() {
     secondaryQuote,
     specialities,
     bookingUrl,
+    instagramUrl,
+    linkedinUrl,
   } = profileConfig;
 
   return (
@@ -134,8 +136,30 @@ function Index() {
           </Link>
         </nav>
 
+        {/* Redes sociais — linha discreta de ícones */}
+        <div className="mt-7 flex animate-fade-in-up items-center justify-center gap-4 delay-500">
+          <a
+            href={instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-sage/25 text-olive-deep/70 transition-all duration-300 ease-out hover:border-olive/40 hover:bg-olive-muted/60 hover:text-olive-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            <Instagram aria-hidden="true" className="h-[1.05rem] w-[1.05rem]" strokeWidth={1.5} />
+          </a>
+          <a
+            href={linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-sage/25 text-olive-deep/70 transition-all duration-300 ease-out hover:border-olive/40 hover:bg-olive-muted/60 hover:text-olive-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          >
+            <Linkedin aria-hidden="true" className="h-[1.05rem] w-[1.05rem]" strokeWidth={1.5} />
+          </a>
+        </div>
+
         {/* Especialidades */}
-        <footer className="mt-12 animate-fade-in-up delay-500">
+        <footer className="mt-10 animate-fade-in-up delay-500">
           <div
             aria-hidden="true"
             className="mx-auto mb-4 h-px w-10 bg-sage/25"

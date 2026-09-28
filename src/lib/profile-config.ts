@@ -16,6 +16,7 @@ export const profileConfig = {
   bookingUrl:
     "https://api.whatsapp.com/send?phone=351964781039&text=Ol%C3%A1%2C%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20a%20marca%C3%A7%C3%A3o%20de%20uma%20consulta%20de%20Psicologia.",
   instagramUrl: "https://www.instagram.com/marisasantos.psicologa/",
+  linkedinUrl: "https://www.linkedin.com/in/marisa-santos-b54393157/",
 
   // Rodapé
   footerLine: "Psicologia Clínica e da Saúde",
