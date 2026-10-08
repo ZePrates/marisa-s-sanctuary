@@ -49,8 +49,7 @@ export const profileConfig = {
           "O meu percurso tem sido sobretudo dedicado ao acompanhamento de adolescentes, adultos e idosos, com experiência em diferentes contextos, nomeadamente na intervenção comunitária e clínica. Ao longo dos anos, fui também aprofundando a minha formação em Cuidados Paliativos, Neuropsicologia Clínica e Psiquiatria, procurando integrar conhecimento e experiência numa prática próxima e centrada em cada pessoa.",
         ],
         closing: [
-          "Porque cada pessoa tem a sua história. E essa história merece ser escutada.",
-          "Se chegaste até aqui, talvez este possa ser o teu primeiro passo.",
+          "Porque cada pessoa tem a sua história. E essa história merece ser escutada. Se chegaste até aqui, talvez este possa ser o teu primeiro passo.",
         ],
       },
       {
