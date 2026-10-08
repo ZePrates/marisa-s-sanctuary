@@ -52,7 +52,7 @@ function ConheceMe() {
             <img
               src={marisaFotoCapaAsset.url}
               alt={`Fotografia de ${name}`}
-              className="h-full w-full scale-[1.15] translate-y-[10px] object-cover"
+              className="h-full w-full object-cover object-[center_18%]"
             />
           </div>
         </div>
