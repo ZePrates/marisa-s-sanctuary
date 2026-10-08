@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Calendar, ArrowLeft } from "lucide-react";
 
-import marisaFotoCapaAsset from "@/assets/marisa-foto-capa.jpg.asset.json";
+import marisaFotoCapaAsset from "@/assets/marisa-foto-retrato.jpg.asset.json";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/conhece-me")({
@@ -52,7 +52,7 @@ function ConheceMe() {
             <img
               src={marisaFotoCapaAsset.url}
               alt={`Fotografia de ${name}`}
-              className="h-full w-full scale-[1.15] translate-y-[10px] object-cover"
+              className="h-full w-full object-cover object-[center_18%]"
             />
           </div>
         </div>
