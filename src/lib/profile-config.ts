@@ -91,6 +91,7 @@ export const profileConfig = {
         lead: "Cada pessoa tem a sua história e o seu próprio caminho.",
         paragraphs: [
           "Em consulta, procuramos compreender o que estás a experienciar, identificar o que precisa de ser cuidado e encontrar, em conjunto, formas de avançar que façam sentido para ti.",
+          "Não espero que chegues à consulta com tudo organizado ou que saibas exatamente o que dizer. Quero que encontres um espaço onde possas ser quem és, e sentires que existe tempo para compreender aquilo que estás a viver.",
           "O acompanhamento é um processo de construção, feito passo a passo, respeitando o momento e as necessidades de cada pessoa.",
         ],
         closing: [
