@@ -34,32 +34,68 @@ export const profileConfig = {
       "Um pouco sobre mim, o meu percurso e a forma como acompanho cada pessoa.",
     sections: [
       {
-        title: "Quem sou",
+        title: "Quem sou eu",
+        lead: "Nem sempre é fácil pedir ajuda. E, muitas vezes, o mais difícil é dar o primeiro passo.",
         paragraphs: [
-          "Sou a Marisa Valido dos Santos, psicóloga clínica e da saúde, com percurso académico e experiência prática voltada para o cuidado integral de cada pessoa. Acompanho adolescentes, adultos e idosos, procurando criar um espaço seguro, acolhedor e sem julgamentos onde seja possível parar, sentir e recomeçar.",
-          "\n",
+          "Sou a Marisa, psicóloga clínica e da saúde, e escolhi a Psicologia porque acredito no valor de termos um espaço onde podemos parar, falar e ser verdadeiramente escutados.",
+          "Ao longo do meu percurso, tive a oportunidade de acompanhar pessoas em diferentes momentos das suas vidas. Conheci histórias marcadas pela doença, pela perda, pela mudança, pelo cansaço, pela ansiedade, mas também pela capacidade de encontrar novas formas de seguir em frente.",
+          "Cada uma dessas experiências contribuiu para a profissional que sou hoje e para a forma como estou em consulta: com proximidade, respeito, atenção e sem julgamentos.",
+          "Não espero que chegues à consulta com tudo organizado ou que saibas exatamente o que dizer. Quero que encontres um espaço onde possas ser quem és, e sentires que existe tempo para compreender aquilo que estás a viver.",
+        ],
+        closing: [
+          "Porque cada pessoa tem a sua história. E essa história merece ser escutada.",
+          "Se chegaste até aqui, talvez este possa ser o teu primeiro passo.",
         ],
       },
       {
-        title: "O meu percurso",
-        items: [
-          "Licenciatura em Psicologia pela Universidade de Évora.",
-          "Mestrado em Psicologia Clínica e da Saúde.",
-          "Especialidade .....",
+        title: "O meu percurso na Psicologia",
+        paragraphs: [
+          "Sou licenciada em Psicologia, mestre em Psicologia Clínica e da Saúde pela Universidade de Évora e especialista em Psicologia Clínica e da Saúde pela Ordem dos Psicólogos Portugueses (OPP).",
+          "O meu percurso tem sido sobretudo dedicado ao acompanhamento de adolescentes, adultos e idosos, com experiência em diferentes contextos, nomeadamente na intervenção comunitária e clínica. Ao longo dos anos, fui também aprofundando a minha formação em Cuidados Paliativos, Neuropsicologia Clínica e Psiquiatria, procurando integrar conhecimento e experiência numa prática próxima e centrada em cada pessoa.",
         ],
       },
       {
-        title: "Experiência e áreas de intervenção",
-        paragraphs: [
-          "Experiência profissional com pessoas idosas e ex-combatentes, nomeadamente no Núcleo de Évora da Liga dos Combatentes.",
-          "Intervenção centrada, entre outras áreas, na exaustão emocional, ansiedade e vivência da doença crónica.",
+        title: "Como posso ajudar",
+        intro:
+          "Acompanho pessoas que estão a atravessar diferentes desafios e momentos de mudança, nomeadamente:",
+        areas: [
+          {
+            title: "Exaustão emocional",
+            description:
+              "Quando o cansaço se acumula e sentimos que já não conseguimos continuar ao mesmo ritmo.",
+          },
+          {
+            title: "Ansiedade",
+            description:
+              "Quando as preocupações e os sintomas de ansiedade começam a interferir no dia a dia.",
+          },
+          {
+            title: "Doença crónica",
+            description:
+              "Quando viver com uma doença implica adaptarmo-nos a uma nova realidade, lidar com limitações ou reconstruir a forma como nos percecionamos.",
+          },
+          {
+            title: "Cuidadores",
+            description:
+              "Quando cuidar de alguém passa a ocupar grande parte da nossa vida e começamos a sentir que estamos a deixar de cuidar de nós próprios.",
+          },
+          {
+            title: "Mudança, adaptação e luto",
+            description:
+              "Quando a vida muda, enfrentamos uma perda ou somos confrontados com uma nova realidade e precisamos de encontrar formas de lidar e seguir em frente.",
+          },
         ],
       },
       {
         title: "A forma como trabalho",
         emphasis: true,
+        lead: "Cada pessoa tem a sua história e o seu próprio caminho.",
         paragraphs: [
-          "A psicologia é, para mim, um espaço de escuta, compreensão e construção de novas formas de lidar com aquilo que nos acontece. Cada pessoa traz consigo uma história única, e acredito que o acompanhamento psicológico deve respeitar esse ritmo e essa singularidade.\nProcuro criar um espaço seguro e sem julgamentos, onde seja possível parar, compreender o que se está a sentir e encontrar, em conjunto, caminhos que façam sentido para cada pessoa.",
+          "Em consulta, procuramos compreender o que estás a experienciar, identificar o que precisa de ser cuidado e encontrar, em conjunto, formas de avançar que façam sentido para ti.",
+          "O acompanhamento é um processo de construção, feito passo a passo, respeitando o momento e as necessidades de cada pessoa.",
+        ],
+        closing: [
+          "Porque, por vezes, não precisamos de ter tudo resolvido. Precisamos apenas de começar por compreender, por onde começar.",
         ],
       },
     ],

@@ -107,42 +107,71 @@ function ConheceMe() {
                 className={`animate-fade-in-up rounded-2xl p-6 ${emphasisClass}`}
                 style={{ animationDelay: `${300 + index * 100}ms` }}
               >
-              <h2 className="font-serif text-[1.15rem] font-semibold text-olive-deep">
-                {section.title}
-              </h2>
+                <h2 className="font-serif text-[1.15rem] font-semibold text-olive-deep">
+                  {section.title}
+                </h2>
 
-              {"paragraphs" in section && (
-                <div className="mt-3 flex flex-col gap-3">
-                  {section.paragraphs.map((paragraph) => (
-                    <p
-                      key={paragraph}
-                      className="text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              )}
+                {"lead" in section && (
+                  <p className="mt-3 font-serif text-[1.1rem] font-medium leading-snug text-balance text-olive-deep">
+                    {section.lead}
+                  </p>
+                )}
 
-              {"items" in section && (
-                <ul className="mt-3 flex flex-col gap-2">
-                  {section.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2.5 text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="mt-2 h-1 w-1 shrink-0 rounded-full bg-sage/60"
-                      />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          );
-        })}
+                {"intro" in section && (
+                  <p className="mt-3 text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80">
+                    {section.intro}
+                  </p>
+                )}
+
+                {"paragraphs" in section && (
+                  <div className="mt-3 flex flex-col gap-3">
+                    {section.paragraphs.map((paragraph) => (
+                      <p
+                        key={paragraph}
+                        className="text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                {"areas" in section && (
+                  <ul className="mt-4 flex flex-col gap-4">
+                    {section.areas.map((area) => (
+                      <li key={area.title} className="flex items-start gap-2.5">
+                        <span
+                          aria-hidden="true"
+                          className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-sage/60"
+                        />
+                        <div>
+                          <h3 className="font-serif text-[1.02rem] font-semibold text-olive-deep">
+                            {area.title}
+                          </h3>
+                          <p className="mt-1 text-justify text-[0.9rem] leading-relaxed text-sage-foreground/80">
+                            {area.description}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {"closing" in section && (
+                  <div className="mt-4 flex flex-col gap-2">
+                    {section.closing.map((line) => (
+                      <p
+                        key={line}
+                        className="font-serif text-[1.02rem] italic leading-snug text-balance text-olive-deep"
+                      >
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </section>
+            );
+          })}
         </div>
 
         {/* Botões finais */}
