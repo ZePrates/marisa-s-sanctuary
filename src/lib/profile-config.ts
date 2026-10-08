@@ -40,7 +40,6 @@ export const profileConfig = {
           "Sou a Marisa, psicóloga clínica e da saúde, e escolhi a Psicologia porque acredito no valor de termos um espaço onde podemos parar, falar e ser verdadeiramente escutados.",
           "Ao longo do meu percurso, tive a oportunidade de acompanhar pessoas em diferentes momentos das suas vidas. Conheci histórias marcadas pela doença, pela perda, pela mudança, pelo cansaço, pela ansiedade, mas também pela capacidade de encontrar novas formas de seguir em frente.",
           "Cada uma dessas experiências contribuiu para a profissional que sou hoje e para a forma como estou em consulta: com proximidade, respeito, atenção e sem julgamentos.",
-          "\n",
         ],
         closing: [
           "Porque cada pessoa tem a sua história. E essa história merece ser escutada.",
