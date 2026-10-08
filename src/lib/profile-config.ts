@@ -41,16 +41,16 @@ export const profileConfig = {
           "Ao longo do meu percurso, tive a oportunidade de acompanhar pessoas em diferentes momentos das suas vidas. Conheci histórias marcadas pela doença, pela perda, pela mudança, pelo cansaço, pela ansiedade, mas também pela capacidade de encontrar novas formas de seguir em frente.",
           "Cada uma dessas experiências contribuiu para a profissional que sou hoje e para a forma como estou em consulta: com proximidade, respeito, atenção e sem julgamentos.",
         ],
-        closing: [
-          "Porque cada pessoa tem a sua história. E essa história merece ser escutada.",
-          "Se chegaste até aqui, talvez este possa ser o teu primeiro passo.",
-        ],
       },
       {
         title: "O meu percurso na Psicologia",
         paragraphs: [
           "Sou licenciada em Psicologia, mestre em Psicologia Clínica e da Saúde pela Universidade de Évora e especialista em Psicologia Clínica e da Saúde pela Ordem dos Psicólogos Portugueses.",
           "O meu percurso tem sido sobretudo dedicado ao acompanhamento de adolescentes, adultos e idosos, com experiência em diferentes contextos, nomeadamente na intervenção comunitária e clínica. Ao longo dos anos, fui também aprofundando a minha formação em Cuidados Paliativos, Neuropsicologia Clínica e Psiquiatria, procurando integrar conhecimento e experiência numa prática próxima e centrada em cada pessoa.",
+        ],
+        closing: [
+          "Porque cada pessoa tem a sua história. E essa história merece ser escutada.",
+          "Se chegaste até aqui, talvez este possa ser o teu primeiro passo.",
         ],
       },
       {
