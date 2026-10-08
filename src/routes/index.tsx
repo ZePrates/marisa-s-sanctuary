@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, Instagram, Linkedin } from "lucide-react";
 
-import marisaFotoCapaAsset from "@/assets/marisa-foto-capa.jpg.asset.json";
+import marisaFotoCapaAsset from "@/assets/marisa-foto-retrato.jpg.asset.json";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/")({
