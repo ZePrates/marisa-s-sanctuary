@@ -95,7 +95,7 @@ export const profileConfig = {
           "O acompanhamento é um processo de construção, feito passo a passo, respeitando o momento e as necessidades de cada pessoa.",
         ],
         closing: [
-          "Porque, por vezes, não precisamos de ter tudo resolvido. Precisamos apenas de começar por compreender, por onde começar.",
+          "Porque, por vezes, não precisamos de ter tudo resolvido. \nPrecisamos apenas de começar por compreender por onde começar.",
         ],
       },
     ],
