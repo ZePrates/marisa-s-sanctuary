@@ -162,7 +162,7 @@ function ConheceMe() {
                     {section.closing.map((line) => (
                       <p
                         key={line}
-                        className="font-serif text-[1.02rem] italic leading-snug text-balance text-olive-deep"
+                        className="font-serif text-[1.02rem] italic leading-snug text-justify hyphens-auto text-olive-deep"
                       >
                         {line}
                       </p>
