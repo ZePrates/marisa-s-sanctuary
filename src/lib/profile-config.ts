@@ -42,8 +42,7 @@ export const profileConfig = {
           "Cada uma dessas experiências contribuiu para a profissional que sou hoje e para a forma como estou em consulta: com proximidade, respeito, atenção e sem julgamentos.",
         ],
         closing: [
-          "Porque cada pessoa tem a sua história. E essa história merece ser escutada.",
-          "Se chegaste até aqui, talvez este possa ser o teu primeiro passo.",
+          "Porque cada pessoa tem a sua história. E essa história merece ser escutada. Se chegaste até aqui, talvez este possa ser o teu primeiro passo.",
         ],
       },
       {
