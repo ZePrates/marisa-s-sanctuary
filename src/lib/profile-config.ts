@@ -49,7 +49,7 @@ export const profileConfig = {
       {
         title: "O meu percurso na Psicologia",
         paragraphs: [
-          "Sou licenciada em Psicologia, mestre em Psicologia Clínica e da Saúde pela Universidade de Évora e especialista em Psicologia Clínica e da Saúde pela Ordem dos Psicólogos Portugueses (OPP).",
+          "Sou licenciada em Psicologia, mestre em Psicologia Clínica e da Saúde pela Universidade de Évora e especialista em Psicologia Clínica e da Saúde pela Ordem dos Psicólogos Portugueses.",
           "O meu percurso tem sido sobretudo dedicado ao acompanhamento de adolescentes, adultos e idosos, com experiência em diferentes contextos, nomeadamente na intervenção comunitária e clínica. Ao longo dos anos, fui também aprofundando a minha formação em Cuidados Paliativos, Neuropsicologia Clínica e Psiquiatria, procurando integrar conhecimento e experiência numa prática próxima e centrada em cada pessoa.",
         ],
       },
