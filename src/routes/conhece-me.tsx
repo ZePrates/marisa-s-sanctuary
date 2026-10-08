@@ -48,14 +48,17 @@ function ConheceMe() {
       <div className="relative z-10 mx-auto flex w-full max-w-[420px] flex-col items-center text-center">
         {/* Fotografia de capa */}
         <div className="animate-soft-scale">
-          <div className="rounded-full p-[3px] ring-1 ring-sage/20">
+          <div className="h-24 w-24 overflow-hidden rounded-full shadow-[0_10px_30px_-18px_var(--color-sage)] ring-1 ring-sage/20">
             <img
               src={marisaFotoCapaAsset.url}
               alt={`Fotografia de ${name}`}
-              className="h-24 w-24 rounded-full border border-sage-border object-cover shadow-[0_10px_30px_-18px_var(--color-sage)]"
+              className="h-full w-full scale-[1.4] translate-y-[17px] object-cover"
             />
           </div>
         </div>
+
+
+
 
         {/* Identidade */}
         <div className="mt-6 animate-fade-in-up delay-100">
