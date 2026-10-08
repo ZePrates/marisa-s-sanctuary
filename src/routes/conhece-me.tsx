@@ -112,7 +112,7 @@ function ConheceMe() {
                 </h2>
 
                 {"lead" in section && (
-                  <p className="mt-3 font-serif text-[1.1rem] font-medium leading-snug text-balance text-olive-deep">
+                  <p className="mt-3 font-serif text-[1.1rem] font-medium leading-snug text-justify hyphens-auto text-olive-deep">
                     {section.lead}
                   </p>
                 )}
