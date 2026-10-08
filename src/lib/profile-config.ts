@@ -14,7 +14,7 @@ export const profileConfig = {
 
   // Links
   bookingUrl:
-    "https://api.whatsapp.com/send?phone=351964781039&text=Ol%C3%A1%2C%20gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20a%20marca%C3%A7%C3%A3o%20de%20uma%20consulta%20de%20Psicologia.",
+    "https://api.whatsapp.com/send?phone=351964781039&text=Ol%C3%A1%20Marisa%21%20Gostaria%20de%20saber%20como%20posso%20agendar%20uma%20consulta%20online%20%F0%9F%92%9A",
   instagramUrl: "https://www.instagram.com/marisasantos.psicologa/",
   linkedinUrl: "https://www.linkedin.com/in/marisa-santos-b54393157/",
 
