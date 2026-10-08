@@ -57,9 +57,6 @@ function ConheceMe() {
           </div>
         </div>
 
-
-
-
         {/* Identidade */}
         <div className="mt-6 animate-fade-in-up delay-100">
           <h1 className="font-serif text-[1.75rem] font-semibold leading-[1.1] tracking-tight text-sage-dark sm:text-[1.9rem]">
@@ -110,7 +107,7 @@ function ConheceMe() {
                 className={`animate-fade-in-up rounded-2xl p-6 ${emphasisClass}`}
                 style={{ animationDelay: `${300 + index * 100}ms` }}
               >
-                <h2 className="font-serif text-[1.15rem] font-semibold text-olive-deep">
+                <h2 className="font-serif text-[1.4rem] font-semibold leading-tight text-[oklch(0.26_0.03_125)]">
                   {section.title}
                 </h2>
 
