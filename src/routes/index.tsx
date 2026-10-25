@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, Instagram, Linkedin } from "lucide-react";
 
-import marisaFotoCapaAsset from "@/assets/marisa-foto-retrato.jpg.asset.json";
+import marisaFotoRetrato from "@/assets/marisa-foto-retrato.jpg";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/")({
@@ -62,7 +62,7 @@ function Index() {
         <div className="animate-soft-scale">
           <div className="rounded-full p-[3px] ring-1 ring-sage/20">
             <img
-              src={marisaFotoCapaAsset.url}
+              src={marisaFotoRetrato}
               alt={`Fotografia de ${name}`}
               className="h-28 w-28 rounded-full border border-sage-border object-cover object-[center_18%] shadow-[0_10px_30px_-18px_var(--color-sage)]"
             />
