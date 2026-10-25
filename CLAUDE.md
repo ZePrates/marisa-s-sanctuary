@@ -16,7 +16,7 @@ O Lovable deixou de fazer parte do fluxo: o código edita-se aqui, o GitHub guar
    ```
    Se mexer em `vite.config.ts`, dependências ou `bun.lock`, correr também `NITRO_PRESET=vercel bun run build`.
 3. Push da branch → a Vercel cria uma _preview_ (`marisa-s-sanctuary-git-<branch>-zeduarte10-5394.vercel.app`, só visível com sessão na Vercel) e a CI do GitHub corre os mesmos checks.
-4. Merge no `main` (só quando o utilizador pedir) → a Vercel publica em produção: `https://marisa-s-sanctuary.vercel.app`.
+4. Merge no `main` (só quando o utilizador pedir) → a Vercel publica em produção: `https://marisasantos-psicologa.vercel.app`.
 
 Projeto Vercel `marisa-s-sanctuary` (conta `zeduarte10-5394`), funções em Dublin (`dub1`).
 

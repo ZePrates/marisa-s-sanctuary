@@ -2,7 +2,7 @@
 
 Página "link na bio" da Marisa Valido dos Santos, Psicóloga Clínica e da Saúde: substitui o Linktree no Instagram ([@marisasantos.psicologa](https://www.instagram.com/marisasantos.psicologa/)).
 
-**Site em produção:** <https://marisa-s-sanctuary.vercel.app> (Vercel; ver «Publicação» abaixo).
+**Site em produção:** <https://marisasantos-psicologa.vercel.app> (Vercel; ver «Publicação» abaixo).
 
 ## Páginas
 
