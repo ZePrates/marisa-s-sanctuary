@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, Instagram, Linkedin } from "lucide-react";
 
-import marisaFotoCapaAsset from "@/assets/marisa-foto-retrato.jpg.asset.json";
+import marisaFotoRetrato from "@/assets/marisa-foto-retrato.jpg";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/")({
@@ -49,10 +49,7 @@ function Index() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-12">
       {/* Elementos decorativos muito discretos */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 overflow-hidden"
-      >
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full border border-sage/10" />
         <div className="absolute -bottom-40 -left-32 h-80 w-80 rounded-full border border-sage/10" />
       </div>
@@ -62,7 +59,7 @@ function Index() {
         <div className="animate-soft-scale">
           <div className="rounded-full p-[3px] ring-1 ring-sage/20">
             <img
-              src={marisaFotoCapaAsset.url}
+              src={marisaFotoRetrato}
               alt={`Fotografia de ${name}`}
               className="h-28 w-28 rounded-full border border-sage-border object-cover object-[center_18%] shadow-[0_10px_30px_-18px_var(--color-sage)]"
             />
@@ -160,10 +157,7 @@ function Index() {
 
         {/* Especialidades */}
         <footer className="mt-10 animate-fade-in-up delay-500">
-          <div
-            aria-hidden="true"
-            className="mx-auto mb-4 h-px w-10 bg-sage/25"
-          />
+          <div aria-hidden="true" className="mx-auto mb-4 h-px w-10 bg-sage/25" />
 
           <p className="whitespace-nowrap text-[0.62rem] font-medium uppercase leading-[1.7] tracking-[0.14em] text-sage-foreground/55">
             {specialities}
