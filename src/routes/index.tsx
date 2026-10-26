@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, Instagram, Linkedin } from "lucide-react";
 
 import marisaFotoRetrato from "@/assets/marisa-foto-retrato.jpg";
+import { AmbientBackground } from "@/components/ambient-background";
 import { profileConfig } from "@/lib/profile-config";
 
 export const Route = createFileRoute("/")({
@@ -48,16 +49,14 @@ function Index() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-12">
-      {/* Elementos decorativos muito discretos */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full border border-sage/10" />
-        <div className="absolute -bottom-40 -left-32 h-80 w-80 rounded-full border border-sage/10" />
-      </div>
+      <AmbientBackground />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[420px] flex-col items-center text-center">
         {/* Fotografia de capa */}
         <div className="animate-soft-scale">
-          <div className="rounded-full p-[3px] ring-1 ring-sage/20">
+          <div className="relative rounded-full p-[3px] ring-1 ring-sage/20">
+            <span aria-hidden="true" className="breathing-ring" />
+            <span aria-hidden="true" className="breathing-ring breathing-ring-late" />
             <img
               src={marisaFotoRetrato}
               alt={`Fotografia de ${name}`}
@@ -88,14 +87,27 @@ function Index() {
         </div>
 
         {/* Mensagem principal */}
-        <div className="mt-8 animate-fade-in-up delay-200">
-          <p className="font-serif text-[1.72rem] font-semibold leading-[1.25] text-balance text-olive-deep sm:text-[1.85rem]">
-            {mainQuote}
+        <div className="mt-8">
+          <p
+            aria-label={mainQuote}
+            className="font-serif text-[1.72rem] font-semibold leading-[1.25] text-balance text-olive-deep sm:text-[1.85rem]"
+          >
+            {mainQuote.split(" ").map((word, index) => (
+              <span
+                key={`${word}-${index}`}
+                aria-hidden="true"
+                className="word-reveal"
+                style={{ animationDelay: `${450 + index * 170}ms` }}
+              >
+                {word}
+                {" "}
+              </span>
+            ))}
           </p>
         </div>
 
-        {/* Mensagem secundária */}
-        <div className="mt-5 animate-fade-in-up delay-300">
+        {/* Mensagem secundária (entra depois da frase principal) */}
+        <div className="mt-5 animate-fade-in-up" style={{ animationDelay: "1.9s" }}>
           <p className="text-[0.94rem] leading-relaxed text-balance text-sage-foreground/70">
             {secondaryQuote}
           </p>
@@ -109,7 +121,7 @@ function Index() {
           {/* Ação principal */}
           <a
             href={bookingUrl}
-            className="group flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl bg-olive px-6 py-4 text-center text-[0.98rem] font-semibold tracking-[0.01em] text-creme-light shadow-[0_8px_22px_-12px_var(--color-olive)] ring-1 ring-inset ring-creme-light/15 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive-deep hover:shadow-[0_12px_28px_-12px_var(--color-olive)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0"
+            className="btn-cta group flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl bg-olive px-6 py-4 text-center text-[0.98rem] font-semibold tracking-[0.01em] text-creme-light shadow-[0_8px_22px_-12px_var(--color-olive)] ring-1 ring-inset ring-creme-light/15 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive-deep hover:shadow-[0_12px_28px_-12px_var(--color-olive)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0"
           >
             <Calendar
               aria-hidden="true"
