@@ -10,10 +10,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import marisaFotoCapa from "@/assets/marisa-foto-capa.jpg";
 import marisaFotoRetrato from "@/assets/marisa-foto-retrato.jpg";
 import { AmbientBackground } from "@/components/ambient-background";
-import { ParallaxImage } from "@/components/parallax-image";
 import { ReadingProgress } from "@/components/reading-progress";
 import { Reveal } from "@/components/reveal";
 import { profileConfig } from "@/lib/profile-config";
@@ -104,15 +102,6 @@ function ConheceMe() {
             {about.intro}
           </p>
         </div>
-
-        {/* Retrato em arco, com parallax suave */}
-        <Reveal className="mt-9 w-full">
-          <ParallaxImage
-            src={marisaFotoCapa}
-            alt={`Retrato de ${name}`}
-            className="mx-auto aspect-[4/5] w-[78%]"
-          />
-        </Reveal>
 
         {/* Blocos de conteúdo */}
         <div className="mt-9 flex w-full flex-col gap-5 text-left">

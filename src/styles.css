@@ -432,17 +432,6 @@
   will-change: transform;
 }
 
-/* Moldura em arco com parallax suave */
-.arch-frame {
-  overflow: hidden;
-  border-radius: 9999px 9999px 1.25rem 1.25rem;
-  box-shadow: 0 24px 48px -28px var(--color-olive);
-}
-
-.arch-frame img {
-  will-change: transform;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .ambient-blob-a,
   .ambient-blob-b,
