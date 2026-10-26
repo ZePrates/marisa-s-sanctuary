@@ -46,7 +46,7 @@ export const profileConfig = {
       {
         title: "O meu percurso na Psicologia",
         paragraphs: [
-          "Sou mestre em Psicologia Clínica e da Saúde, especialista em Psicologia Clínica e da Saúde e pós-graduada em Cuidados Paliativos.",
+          "Sou mestre em Psicologia Clínica e da Saúde pela Universidade de Évora, especialista em Psicologia Clínica e da Saúde pela Ordem dos Psicólogos Portugueses e pós-graduada em Cuidados Paliativos.",
           "O meu percurso tem sido sobretudo dedicado ao acompanhamento de adolescentes, adultos e idosos, com experiência em diferentes contextos, nomeadamente na intervenção comunitária e clínica. Ao longo dos anos, também aprofundei a minha formação em Neuropsicologia Clínica e Psiquiatria, procurando integrar conhecimento e experiência numa prática próxima e centrada em cada pessoa.",
         ],
       },
