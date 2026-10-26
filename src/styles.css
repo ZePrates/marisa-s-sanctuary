@@ -73,8 +73,7 @@
   --color-olive-muted: var(--olive-muted);
 
   --font-serif: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
-  --font-sans: "Karla", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  --font-sans: "Karla", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 :root {
@@ -254,4 +253,228 @@
 
 .delay-500 {
   animation-delay: 0.5s;
+}
+
+/* ------------------------------------------------------------------ */
+/* "Respirar": movimento calmo e lento. Tudo desligado com             */
+/* prefers-reduced-motion (ver o bloco no fim do ficheiro).            */
+/* ------------------------------------------------------------------ */
+
+/* Manchas de fundo que derivam devagar */
+@keyframes blob-drift-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(28px, 36px, 0) scale(1.08);
+  }
+  66% {
+    transform: translate3d(-18px, 18px, 0) scale(0.96);
+  }
+}
+
+@keyframes blob-drift-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  40% {
+    transform: translate3d(-34px, -26px, 0) scale(1.1);
+  }
+  75% {
+    transform: translate3d(20px, -12px, 0) scale(0.95);
+  }
+}
+
+.ambient-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  will-change: transform;
+}
+
+.ambient-blob-a {
+  animation: blob-drift-a 26s ease-in-out infinite;
+}
+
+.ambient-blob-b {
+  animation: blob-drift-b 32s ease-in-out infinite;
+}
+
+/* Anel que "respira" à volta da fotografia (ciclo de 6s, como uma respiração calma) */
+@keyframes breathe-ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.14);
+    opacity: 0;
+  }
+}
+
+.breathing-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-sage);
+  animation: breathe-ring 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.breathing-ring-late {
+  animation-delay: 3s;
+}
+
+/* Frase revelada palavra a palavra */
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.45em);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.word-reveal {
+  display: inline-block;
+  opacity: 0;
+  animation: word-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Botão principal: brilho que passa de vez em quando + pulsar muito leve */
+@keyframes button-shine {
+  0%,
+  62% {
+    transform: translateX(-130%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(330%) skewX(-18deg);
+  }
+}
+
+@keyframes button-glow {
+  0%,
+  100% {
+    box-shadow: 0 8px 22px -12px var(--color-olive);
+  }
+  50% {
+    box-shadow: 0 12px 30px -10px var(--color-olive);
+  }
+}
+
+.btn-cta {
+  position: relative;
+  overflow: hidden;
+  animation: button-glow 5s ease-in-out infinite;
+}
+
+.btn-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 28%;
+  background: linear-gradient(100deg, transparent, oklch(0.985 0.008 91.57 / 28%), transparent);
+  animation: button-shine 7s ease-in-out 1.6s infinite;
+  pointer-events: none;
+}
+
+/* Revelação ao fazer scroll (o componente <Reveal> junta .is-visible) */
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.reveal-pending,
+.reveal-pending.is-visible {
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-pending.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cartões das áreas de apoio */
+.area-card {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease,
+    background-color 0.4s ease;
+}
+
+.area-card:hover,
+.area-card:active {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--color-olive) 40%, transparent);
+  background-color: color-mix(in oklab, var(--color-creme-light) 90%, transparent);
+  box-shadow: 0 14px 28px -18px var(--color-olive);
+}
+
+/* Barra de progresso de leitura */
+.reading-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-sage), var(--color-olive));
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+/* Moldura em arco com parallax suave */
+.arch-frame {
+  overflow: hidden;
+  border-radius: 9999px 9999px 1.25rem 1.25rem;
+  box-shadow: 0 24px 48px -28px var(--color-olive);
+}
+
+.arch-frame img {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-blob-a,
+  .ambient-blob-b,
+  .breathing-ring,
+  .btn-cta {
+    animation: none;
+  }
+
+  .btn-cta::after {
+    display: none;
+  }
+
+  .word-reveal {
+    animation: none;
+    opacity: 1;
+  }
+
+  .reveal-pending,
+  .reveal-pending.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .area-card,
+  .area-card:hover,
+  .area-card:active {
+    transition: none;
+    transform: none;
+  }
+
+  .reading-progress {
+    display: none;
+  }
 }

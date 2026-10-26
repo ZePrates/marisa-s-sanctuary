@@ -1,8 +1,31 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Calendar, ArrowLeft } from "lucide-react";
+import {
+  ArrowLeft,
+  BatteryLow,
+  Calendar,
+  HandHeart,
+  HeartPulse,
+  Sprout,
+  Wind,
+  type LucideIcon,
+} from "lucide-react";
 
+import marisaFotoCapa from "@/assets/marisa-foto-capa.jpg";
 import marisaFotoRetrato from "@/assets/marisa-foto-retrato.jpg";
+import { AmbientBackground } from "@/components/ambient-background";
+import { ParallaxImage } from "@/components/parallax-image";
+import { ReadingProgress } from "@/components/reading-progress";
+import { Reveal } from "@/components/reveal";
 import { profileConfig } from "@/lib/profile-config";
+
+// Ícone de cada área de apoio (a chave é o título em profile-config.ts)
+const areaIcons: Record<string, LucideIcon> = {
+  "Exaustão emocional": BatteryLow,
+  Ansiedade: Wind,
+  "Doença crónica": HeartPulse,
+  Cuidadores: HandHeart,
+  "Mudança, adaptação e luto": Sprout,
+};
 
 export const Route = createFileRoute("/conhece-me")({
   head: () => ({
@@ -39,11 +62,8 @@ function ConheceMe() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-10 sm:py-12">
-      {/* Elementos decorativos muito discretos, iguais à home */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-32 -top-32 h-72 w-72 rounded-full border border-sage/10" />
-        <div className="absolute -bottom-40 -left-32 h-80 w-80 rounded-full border border-sage/10" />
-      </div>
+      <ReadingProgress />
+      <AmbientBackground />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[420px] flex-col items-center text-center">
         {/* Fotografia de capa */}
@@ -85,6 +105,15 @@ function ConheceMe() {
           </p>
         </div>
 
+        {/* Retrato em arco, com parallax suave */}
+        <Reveal className="mt-9 w-full">
+          <ParallaxImage
+            src={marisaFotoCapa}
+            alt={`Retrato de ${name}`}
+            className="mx-auto aspect-[4/5] w-[78%]"
+          />
+        </Reveal>
+
         {/* Blocos de conteúdo */}
         <div className="mt-9 flex w-full flex-col gap-5 text-left">
           {about.sections.map((section, index) => {
@@ -102,74 +131,80 @@ function ConheceMe() {
                 : variants[index % variants.length];
 
             return (
-              <section
-                key={section.title}
-                className={`animate-fade-in-up rounded-2xl p-6 ${emphasisClass}`}
-                style={{ animationDelay: `${300 + index * 100}ms` }}
-              >
-                <h2 className="font-serif text-[1.4rem] font-semibold leading-tight text-[oklch(0.26_0.03_125)]">
-                  {section.title}
-                </h2>
+              <Reveal key={section.title}>
+                <section className={`rounded-2xl p-6 ${emphasisClass}`}>
+                  <h2 className="font-serif text-[1.4rem] font-semibold leading-tight text-[oklch(0.26_0.03_125)]">
+                    {section.title}
+                  </h2>
 
-                {"lead" in section && (
-                  <p className="mt-3 font-serif text-[1.1rem] font-medium leading-snug text-justify hyphens-auto text-olive-deep">
-                    {section.lead}
-                  </p>
-                )}
+                  {"lead" in section && (
+                    <p className="mt-3 font-serif text-[1.1rem] font-medium leading-snug text-justify hyphens-auto text-olive-deep">
+                      {section.lead}
+                    </p>
+                  )}
 
-                {"intro" in section && (
-                  <p className="mt-3 text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80">
-                    {section.intro}
-                  </p>
-                )}
+                  {"intro" in section && (
+                    <p className="mt-3 text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80">
+                      {section.intro}
+                    </p>
+                  )}
 
-                {"paragraphs" in section && (
-                  <div className="mt-3 flex flex-col gap-3">
-                    {section.paragraphs.map((paragraph) => (
-                      <p
-                        key={paragraph}
-                        className="text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
-                      >
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                )}
+                  {"paragraphs" in section && (
+                    <div className="mt-3 flex flex-col gap-3">
+                      {section.paragraphs.map((paragraph) => (
+                        <p
+                          key={paragraph}
+                          className="text-justify text-[0.92rem] leading-relaxed text-sage-foreground/80"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  )}
 
-                {"areas" in section && (
-                  <ul className="mt-4 flex flex-col gap-4">
-                    {section.areas.map((area) => (
-                      <li key={area.title} className="flex items-start gap-2.5">
-                        <span
-                          aria-hidden="true"
-                          className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-sage/60"
-                        />
-                        <div>
-                          <h3 className="font-serif text-[1.02rem] font-semibold text-olive-deep">
-                            {area.title}
-                          </h3>
-                          <p className="mt-1 text-justify text-[0.9rem] leading-relaxed text-sage-foreground/80">
-                            {area.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  {"areas" in section && (
+                    <ul className="mt-4 flex flex-col gap-3">
+                      {section.areas.map((area) => {
+                        const Icon = areaIcons[area.title] ?? Sprout;
+                        return (
+                          <li
+                            key={area.title}
+                            className="area-card flex items-start gap-3.5 rounded-xl border border-olive/15 bg-creme-light/50 p-4"
+                          >
+                            <span
+                              aria-hidden="true"
+                              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-olive-muted text-olive"
+                            >
+                              <Icon className="h-[1.15rem] w-[1.15rem]" strokeWidth={1.6} />
+                            </span>
+                            <div>
+                              <h3 className="font-serif text-[1.08rem] font-semibold text-olive-deep">
+                                {area.title}
+                              </h3>
+                              <p className="mt-1 text-[0.9rem] leading-relaxed text-sage-foreground/80">
+                                {area.description}
+                              </p>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
 
-                {"closing" in section && (
-                  <div className="mt-4 flex flex-col gap-2">
-                    {section.closing.map((line) => (
-                      <p
-                        key={line}
-                        className="font-serif text-[1.02rem] italic leading-snug text-justify hyphens-auto text-olive-deep"
-                      >
-                        {line}
-                      </p>
-                    ))}
-                  </div>
-                )}
-              </section>
+                  {"closing" in section && (
+                    <div className="mt-4 flex flex-col gap-2">
+                      {section.closing.map((line) => (
+                        <p
+                          key={line}
+                          className="font-serif text-[1.02rem] italic leading-snug text-justify hyphens-auto text-olive-deep"
+                        >
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                </section>
+              </Reveal>
             );
           })}
         </div>
@@ -181,7 +216,7 @@ function ConheceMe() {
         >
           <a
             href={bookingUrl}
-            className="group flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl bg-olive px-6 py-4 text-center text-[0.98rem] font-semibold tracking-[0.01em] text-creme-light shadow-[0_8px_22px_-12px_var(--color-olive)] ring-1 ring-inset ring-creme-light/15 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive-deep hover:shadow-[0_12px_28px_-12px_var(--color-olive)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0"
+            className="btn-cta group flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl bg-olive px-6 py-4 text-center text-[0.98rem] font-semibold tracking-[0.01em] text-creme-light shadow-[0_8px_22px_-12px_var(--color-olive)] ring-1 ring-inset ring-creme-light/15 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-olive-deep hover:shadow-[0_12px_28px_-12px_var(--color-olive)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-background active:translate-y-0"
           >
             <Calendar
               aria-hidden="true"
